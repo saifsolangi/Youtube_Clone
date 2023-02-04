@@ -1,0 +1,15 @@
+{% macro card(video) -%}
+        <div class="card">
+            <div>
+                <img class= 'thumbnail'src="{{video['thumbnails'][-1]['url']}}" alt="">
+            </div>
+            <div class="info">
+                    <img class="logo" src="../static/logo.jpg" alt="img">
+                <div>
+                    <h3>{{video['title']}}</h3>
+                    <p>Data Science With Saify</p>
+                    <p>{{video['stats']['views'] | numberize}} views  • {{video['publishedTimeText']}}</p>
+                </div>
+            </div>
+        </div>
+{%- endmacro %}
